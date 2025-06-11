@@ -1,0 +1,15 @@
+{
+  "entradas": [
+    { "descricao": "Salário", "valor": 3000 },
+    { "descricao": "Freelance", "valor": 1200 },
+    { "descricao": "Pensão 1", "valor": 5200 },
+    { "descricao": "Pensão 2", "valor": 5200 }
+  ],
+  "saidas": [
+    { "descricao": "Aluguel", "valor": 1000 },
+    { "descricao": "Supermercado", "valor": 450 },
+    { "descricao": "Internet", "valor": 50 },
+    { "descricao": "Farmácia", "valor": 350 },
+    { "descricao": "Água", "valor": 80 }
+  ]
+}

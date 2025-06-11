@@ -1,0 +1,65 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "API Financeiro Pessoal",
+    "description": "Documentação da API para controle financeiro pessoal"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": ["http"],
+  "paths": {
+    "/transacoes": {
+      "get": {
+        "summary": "Listar todas as transações",
+        "responses": {
+          "200": {
+            "description": "Lista de transações retornada com sucesso"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar nova transação",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "corpo",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "descricao": { "type": "string" },
+                "valor": { "type": "number" },
+                "tipo": { "type": "string", "enum": ["entrada", "saida"] },
+                "data": { "type": "string", "format": "date" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Transação criada com sucesso"
+          }
+        }
+      }
+    },
+    "/transacoes/{id}": {
+      "delete": {
+        "summary": "Excluir transação por ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Transação excluída com sucesso"
+          }
+        }
+      }
+    }
+  }
+}

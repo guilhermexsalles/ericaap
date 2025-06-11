@@ -1,0 +1,128 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  padding-top: 80px; /* espaço para menu fixo */
+  color: #2f3640;
+}
+
+/* Garante que o menu se estenda por toda a largura da tela */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* <-- isso força o nav a usar toda a viewport */
+  background: rgba(47, 54, 64, 0.9);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+}
+
+nav a {
+  color: #f5f6fa;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #00a8ff;
+}
+
+/* Container principal */
+div {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #192a56;
+  font-size: 2rem;
+}
+
+/* Caixa de conteúdo */
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Inputs e botões */
+input {
+  padding: 0.5rem;
+  margin: 0.5rem 0.5rem 1rem 0;
+  border: 1px solid #dcdde1;
+  border-radius: 8px;
+  width: calc(100% - 1rem);
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  background-color: #44bd32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: #4cd137;
+}
+
+/* Lista de transações */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.75rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li button {
+  background-color: #e84118;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+}
+
+li button:hover {
+  background-color: #c23616;
+}
+
+/* Saldo */
+p {
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  background: rgba(223, 249, 251, 0.9);
+  border: 1px solid #c7ecee;
+  color: #009432;
+  font-weight: bold;
+}

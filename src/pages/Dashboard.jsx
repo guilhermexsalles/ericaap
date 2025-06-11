@@ -18,7 +18,11 @@ export default function Dashboard() {
   const [saldo, setSaldo] = useState(0);
 
   useEffect(() => {
-    axios.get(`${import.meta.env.VITE_API_URL}/api/transacoes`)
+    const baseURL = import.meta.env.DEV
+      ? 'http://localhost:3000'
+      : import.meta.env.VITE_API_URL;
+
+    axios.get(`${baseURL}/api/transacoes`)
       .then((res) => {
         const transacoes = res.data;
 

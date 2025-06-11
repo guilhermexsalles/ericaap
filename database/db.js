@@ -1,10 +1,10 @@
 const mysql = require('mysql2/promise');
 
 const db = mysql.createPool({
-  host: 'sql301.infinityfree.com',
-  user: 'if0_39191602',
-  password: 'V3xD3NRQS5w',
-  database: 'if0_39191602_novo2'
+  host: 'db4free.net',
+  user: 'bancotestepro12',
+  password: '3RFVW3zL*$MT2f4',
+  database: 'bancotestepro12'
 });
 
 module.exports = db;
